@@ -1,0 +1,9 @@
+<app-top-bar></app-top-bar>
+
+<div class="left-bar" [ngClass]="{ 'left-arrive': (small$ | async), 'left-gone': !(small$ | async) }">
+  <app-left-bar></app-left-bar>
+</div>
+  
+<div class="content" [ngClass]="{'full-content': !(small$ | async), 'small-content': (small$ | async)}">
+  <ng-content></ng-content>
+</div>
