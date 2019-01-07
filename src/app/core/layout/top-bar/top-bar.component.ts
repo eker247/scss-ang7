@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { interval, of, concat } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-top-bar',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./top-bar.component.scss']
 })
 export class TopBarComponent implements OnInit {
+  clock$ = concat (
+    of(this.getTime()),
+    interval(1000).pipe(map(() => this.getTime()))
+  );
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
+  getTime(): string {
+    return new Date(Date.now()).toLocaleString().substr(11, 8);
+  }
 }

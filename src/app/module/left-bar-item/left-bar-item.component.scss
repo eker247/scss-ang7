@@ -1,0 +1,42 @@
+@import "src/style_variables.scss";
+
+
+.left-bar-item {
+  background-color: $blue;
+  padding: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  border-left: 6px solid $blue;
+  // border-bottom: 3px solid $blue;
+  color: white;
+  z-index: 0;
+  cursor: pointer;
+}
+
+.left-bar-item:hover {
+  background-color: $indigo;
+}
+
+.item-active {
+  background-color: #fff1;
+  border-left: 6px solid $teal;
+  // border-bottom: 3px solid $cyan;
+  box-shadow: $shadow;
+  font-weight: 800;
+  z-index: 1;
+  margin: 3px 3px 3px 0;
+}
+
+.item-ico {
+  position: relative;
+  top: 3px;
+  display: inline-block;
+  margin: 0 6px 0 3px;
+  width: 18px;
+  height: 18px;
+  // background-color: #f55;
+}
+
+.item-text {
+  display: inline-block;
+}
