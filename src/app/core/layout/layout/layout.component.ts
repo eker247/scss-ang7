@@ -8,9 +8,9 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent implements OnInit {
-  small$ = this.ui.windowWidth.pipe(map(r => r !== 'S'));
+  sidebar$ = this.is.sidebar$;
 
-  constructor(public ui: InterfaceService) { }
+  constructor(public is: InterfaceService) { }
 
   ngOnInit() {
   }
