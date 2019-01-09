@@ -1,3 +1,5 @@
+@import 'src/variables.scss';
+
 .content {
   position: absolute;
   top: 50px;
@@ -12,7 +14,7 @@
   position: absolute;
   left: 0;
   top: 50px;
-  width: 200px;
+  width: $leftbarWidth;
   height: calc(100vh - 50px);
   padding: 0;
   margin: 0;
@@ -23,7 +25,7 @@
 .left-gone {
   animation-name: hide-left-bar;
   animation-duration: 500ms;
-  left: -200px;
+  left: - $leftbarWidth;
 }
 
 .left-arrive {
@@ -33,11 +35,11 @@
 
 @keyframes hide-left-bar {
   from { left: 0; }
-  to { left: -200px; }
+  to { left: - $leftbarWidth; }
 }
 
 @keyframes show-left-bar {
-  from { left: -200px; }
+  from { left: - $leftbarWidth; }
   to { left: 0; }
 }
 
@@ -50,16 +52,15 @@
 .small-content {
   animation-name: shrink-content;
   animation-duration: 500ms;
-  width: calc(100% - 200px);
+  width: $contentWidth;
 }
 
 @keyframes extend-content {
-  from { right: 0; width: calc(100% - 200px); }
+  from { right: 0; width: $contentWidth; }
   to { right: 0; width: 100%; }
 }
 
 @keyframes shrink-content {
   from { right: 0; width: 100%; }
-  to { right: 0; width: calc(100% - 200px);; }
+  to { right: 0; width: $contentWidth; }
 }
-
