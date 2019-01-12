@@ -1,2 +1,20 @@
-$leftbarWidth: 200px;
-$contentWidth: calc(100% - 200px);
+// dimension
+$left-bar-width: 200px;
+$content-width: calc(100% - 200px);
+
+$top-bar-height: 42px;
+$content-height: calc(100vh - 42px);
+
+$div-margin: 6px;
+
+// colors
+$content-color: #aaa;
+$left-bar-color: #999;
+$top-bar-color: #333;
+$hamburger-color: #fff;
+
+
+// animation
+$animation-duration: 500ms;
+
+

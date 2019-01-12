@@ -1,20 +1,21 @@
-$sMargin: 6px;
-$mMargin: 24px;
+@import 'src/variables.scss';
+
+$hamburger-size: $top-bar-height - 2 * $div-margin;
 
 .top-bar {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 50px;
-  background-color: #333;
+  height: $top-bar-height;
+  background-color: $top-bar-color;
 }
 
 .hamburger-div {
   position: absolute;
-  top: $sMargin;
-  left: $sMargin;
-  width: $mMargin;
-  height: $mMargin;
-  background-color: #fff;
+  top: $div-margin;
+  left: $div-margin;
+  width: $hamburger-size;
+  height: $hamburger-size;
+  background-color: $hamburger-color;
 }

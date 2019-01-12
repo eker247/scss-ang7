@@ -18,7 +18,7 @@ export class InterfaceService {
     fromEvent(window, 'resize').subscribe(() => {
       const width = this.getWindowWidth();
       this._currenWindowWidth.next(width);
-      this._sidebar.next(width !== 'S');
+      this._sidebar.next(width !== 'xs');
     });
   }
 
@@ -27,12 +27,16 @@ export class InterfaceService {
   }
 
   getWindowWidth(): string {
-    if (window.innerWidth < 961) {
-      return 'S';
-    } else if (window.innerWidth < 1281) {
-      return 'M';
+    if (window.innerWidth < 576) {
+      return 'xs';
+    } else if (window.innerWidth < 768) {
+      return 'sm';
+    } else if (window.innerWidth < 992) {
+      return 'md';
+    } else if (window.innerWidth < 1200) {
+      return 'lg';
     } else {
-      return 'L';
+      return 'xl';
     }
   }
 }

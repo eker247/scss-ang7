@@ -2,65 +2,65 @@
 
 .content {
   position: absolute;
-  top: 50px;
+  top: $top-bar-height;
   right: 0;
-  background-color: #aaa;
-  padding: 6px;
-  height: calc(100vh - 50px);
+  background-color: $content-color;
+  padding: $div-margin;
+  height: $content-height;
   overflow-y: auto;
 }
 
 .left-bar {
   position: absolute;
   left: 0;
-  top: 50px;
-  width: $leftbarWidth;
-  height: calc(100vh - 50px);
+  top: $top-bar-height;
+  width: $left-bar-width;
+  height: $content-height;
   padding: 0;
   margin: 0;
-  background-color: #999;
+  background-color: $left-bar-color;
   overflow-y: auto;
 }
 
 .left-gone {
   animation-name: hide-left-bar;
-  animation-duration: 500ms;
-  left: - $leftbarWidth;
+  animation-duration: $animation-duration;
+  left: - $left-bar-width;
 }
 
 .left-arrive {
   animation-name: show-left-bar;
-  animation-duration: 500ms;
+  animation-duration: $animation-duration;
 }
 
 @keyframes hide-left-bar {
   from { left: 0; }
-  to { left: - $leftbarWidth; }
+  to { left: - $left-bar-width; }
 }
 
 @keyframes show-left-bar {
-  from { left: - $leftbarWidth; }
+  from { left: - $left-bar-width; }
   to { left: 0; }
 }
 
 .full-content {
   animation-name: extend-content;
-  animation-duration: 500ms;
+  animation-duration: $animation-duration;
   width: 100%;
 }
 
 .small-content {
   animation-name: shrink-content;
-  animation-duration: 500ms;
-  width: $contentWidth;
+  animation-duration: $animation-duration;
+  width: $content-width;
 }
 
 @keyframes extend-content {
-  from { right: 0; width: $contentWidth; }
+  from { right: 0; width: $content-width; }
   to { right: 0; width: 100%; }
 }
 
 @keyframes shrink-content {
   from { right: 0; width: 100%; }
-  to { right: 0; width: $contentWidth; }
+  to { right: 0; width: $content-width; }
 }
