@@ -1,0 +1,75 @@
+<app-page-div title="Register">
+  <form [formGroup]="form">
+    <div class="row">
+      <div class="col-xs-12 col-12 col-md-4 form-group">
+        <input
+          type="text"
+          formControlName="date"
+          class="form-control"
+        >
+      </div>
+      <div class="col-xs-12 col-12 col-md-3 form-group">
+        <span class="btn btn-success" (click)="dp.toggle()" [attr.aria-expanded]="dp.isOpen">Date Picker</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="fname">First name</label>
+      <input id="fname" formControlName="fname" class="form-control" placeholder="Maciej" />
+      <small id="fname-error" class="form-text text-muted">First name error</small>
+    </div>
+    <div class="form-group">
+      <label for="lname">Last name</label>
+      <input id="lname" class="form-control" placeholder="Aniserowicz" />
+      <small id="lname-error" class="form-text text-muted">First name error</small>
+    </div>
+    <div class="form-group">
+      <label for="company">Company</label>
+      <input id="company" class="form-control" placeholder="DevStyle" />
+      <small id="company-error" class="form-text text-muted">Company error</small>
+    </div>
+  </form>  
+<hr>
+  <form>
+    <div class="col">
+      <div class="form-group row">
+        <label for="fname" class="col-sm-1 col-form-label">First name</label>
+        <input id="fname" class="form-control col-sm-11" placeholder="Maciej" />
+      </div>
+      <div class="form-group row">
+        <label for="lname" class="col-sm-1 col-form-label">Last name</label>
+        <input id="lname" class="form-control col-sm-11" placeholder="Aniserowicz" />
+      </div>
+      <div class="form-group row">
+        <label for="company" class="col-sm-1 col-form-label">Company</label>
+        <input id="company" class="form-control col-sm-11" placeholder="DevStyle" />
+      </div>
+      <div class="form-group row">
+        <label for="city" class="col-sm-1 col-form-label">City</label>
+        <input id="city" class="form-control col-sm-11" placeholder="Warszawa" />
+      </div>
+    </div>
+  </form>
+<hr>
+
+  <form class="form-inline">
+    <label class="sr-only" for="inlineFormInputName2">Name</label>
+    <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Jane Doe">
+  
+    <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
+    <div class="input-group mb-2 mr-sm-2">
+      <div class="input-group-prepend">
+        <div class="input-group-text">@</div>
+      </div>
+      <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Username">
+    </div>
+  
+    <div class="form-check mb-2 mr-sm-2">
+      <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+      <label class="form-check-label" for="inlineFormCheck">
+        Remember me
+      </label>
+    </div>
+  
+    <button type="submit" class="btn btn-primary mb-2">Submit</button>
+  </form>
+</app-page-div>

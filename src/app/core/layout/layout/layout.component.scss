@@ -5,7 +5,7 @@
   top: $top-bar-height;
   right: 0;
   background-color: $content-color;
-  padding: $div-margin;
+  padding: $margin;
   height: $content-height;
   overflow-y: auto;
 }
@@ -20,6 +20,7 @@
   margin: 0;
   background-color: $left-bar-color;
   overflow-y: auto;
+  box-shadow: 0 6px 6px black;
 }
 
 .left-gone {
@@ -63,4 +64,13 @@
 @keyframes shrink-content {
   from { right: 0; width: 100%; }
   to { right: 0; width: $content-width; }
+}
+
+.top-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $top-bar-height;
+  background-color: $top-bar-color;
 }

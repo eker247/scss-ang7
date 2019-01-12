@@ -1,21 +1,19 @@
 @import 'src/variables.scss';
 
-$hamburger-size: $top-bar-height - 2 * $div-margin;
+$tb-content-height: $top-bar-height - 2 * $margin;
 
-.top-bar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: $top-bar-height;
-  background-color: $top-bar-color;
+%tb-content-item {
+  display: inline-block;
+  height: $tb-content-height;
+  margin: $margin 0 $margin $margin;
 }
 
 .hamburger-div {
-  position: absolute;
-  top: $div-margin;
-  left: $div-margin;
-  width: $hamburger-size;
-  height: $hamburger-size;
+  @extend %tb-content-item;
+  width: $tb-content-height;
   background-color: $hamburger-color;
+}
+
+.tb-item {
+  @extend %tb-content-item;
 }

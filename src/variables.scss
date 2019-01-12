@@ -5,12 +5,22 @@ $content-width: calc(100% - 200px);
 $top-bar-height: 42px;
 $content-height: calc(100vh - 42px);
 
-$div-margin: 6px;
+$margin: 6px;
 
 // colors
-$content-color: #aaa;
-$left-bar-color: #999;
-$top-bar-color: #333;
+
+$clr-checked: #0c0;
+
+$clr-text: #fff;
+$clr-light-bg: #a02;
+$clr-mid-bg: #501;
+$clr-dark-bg: #201;
+
+$side-bar-active-bg: $clr-light-bg;
+
+$content-color: #eee;
+$left-bar-color: $clr-dark-bg;
+$top-bar-color: #111;
 $hamburger-color: #fff;
 
 
