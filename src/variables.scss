@@ -4,6 +4,7 @@ $content-width: calc(100% - 200px);
 
 $top-bar-height: 42px;
 $content-height: calc(100vh - 42px);
+$height: calc(100vh - 42px);
 
 $margin: 6px;
 
@@ -12,16 +13,18 @@ $margin: 6px;
 $clr-checked: #0c0;
 
 $clr-text: #fff;
-$clr-light-bg: #a02;
-$clr-mid-bg: #501;
-$clr-dark-bg: #201;
+$clr-light-accent: #fc0;
+$clr-mid-accent: #f80;
+$clr-light-bg: #904;
+$clr-mid-bg: #503;
+$clr-dark-bg: #202;
 
 $side-bar-active-bg: $clr-light-bg;
 
-$content-color: #eee;
+$content-color: $clr-dark-bg;
 $left-bar-color: $clr-dark-bg;
-$top-bar-color: #111;
-$hamburger-color: #fff;
+$top-bar-color: $clr-light-bg;
+$hamburger-color: $clr-mid-bg;
 
 
 // animation

@@ -1,26 +1,30 @@
 @import 'src/variables.scss';
 
 .content {
+  // display: block;
+  // padding-left: 30px;
   position: absolute;
   top: $top-bar-height;
-  right: 0;
+  left: $left-bar-width;
   background-color: $content-color;
-  padding: $margin;
+  // padding: $margin;
   height: $content-height;
   overflow-y: auto;
+  // padding-left: 46px;
 }
 
 .left-bar {
   position: absolute;
   left: 0;
-  top: $top-bar-height;
+  top: 42px;
   width: $left-bar-width;
   height: $content-height;
   padding: 0;
   margin: 0;
   background-color: $left-bar-color;
+  // background-color: blue;
   overflow-y: auto;
-  box-shadow: 0 6px 6px black;
+  box-shadow: 0 0 6px $clr-light-bg;
 }
 
 .left-gone {
@@ -48,6 +52,7 @@
   animation-name: extend-content;
   animation-duration: $animation-duration;
   width: 100%;
+  left: 0;
 }
 
 .small-content {
@@ -57,13 +62,13 @@
 }
 
 @keyframes extend-content {
-  from { right: 0; width: $content-width; }
+  from { left: $left-bar-width; width: $content-width; }
   to { right: 0; width: 100%; }
 }
 
 @keyframes shrink-content {
-  from { right: 0; width: 100%; }
-  to { right: 0; width: $content-width; }
+  from { left: 0; width: 100%; }
+  to { left: $left-bar-width; width: $content-width; }
 }
 
 .top-bar {

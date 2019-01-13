@@ -1,13 +1,17 @@
+@import 'src/variables.scss';
+
 .page-div {
-  background-color: #fff;
-  box-shadow: 0 0 10px #000a;
+  display: inline-block;
+  background-color: $clr-mid-bg;
+  box-shadow: 0 0 10px $clr-light-bg;
   padding: 6px;
-  max-width: 800px;
-  margin: auto;
+  // max-width: 250px;
+  margin: $margin $margin 2 * $margin 2 * $margin;
+  color: $clr-text;
 }
 
 .page-title {
-
+  color: $clr-text;
 }
 
 .page-body {

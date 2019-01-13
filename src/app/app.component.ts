@@ -11,13 +11,13 @@ export class AppComponent {
   title = 'scss-test';
   constructor(private _bs: BreadcrumbService, public ts: TranslateService) {
     // this.transTest();
-    this.jsonTest();
+    // this.jsonTest();
   }
 
   transTest() {
     const num = 2;
-    console.log('Translated:', this.ts.transPlural(`you have ${num} item in cart`));
-    console.log('=== END ===');
+    // console.log('Translated:', this.ts.transPlural(`you have ${num} item in cart`));
+    // console.log('=== END ===');
   }
 
   jsonTest() {

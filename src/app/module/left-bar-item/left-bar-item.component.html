@@ -1,6 +1,8 @@
 <div class="left-bar-item" [ngClass]="{'item-active': active}">
   <div class="item-ico">
-    <i class="fa fa-user fa-1x black" aria-hidden="true"> </i> 
+    <svg width="24" height="24" [attr.fill]="fill">
+      <circle cx="12" cy="12" r="11" stroke="green" stroke-width="1" fill="ico" />
+    </svg>
   </div>
-  <div class="item-text">{{ name }}</div>
+  <div class="item-text ml-2">{{ name }}</div>
 </div>

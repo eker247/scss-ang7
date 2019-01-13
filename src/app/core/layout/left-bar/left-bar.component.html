@@ -1,9 +1,13 @@
-<app-left-bar-item name="User" routerLink="user"></app-left-bar-item>
-<app-left-bar-item name="User" routerLink="user"></app-left-bar-item>
-<app-left-bar-item name="User" routerLink="user" active="true"></app-left-bar-item>
-<app-left-bar-item name="Register" routerLink="user/register"></app-left-bar-item>
-<app-left-bar-item name="User" routerLink="user"></app-left-bar-item>
-<app-left-bar-item name="User" routerLink="user"></app-left-bar-item>
-<app-left-bar-item name="User" routerLink="user"></app-left-bar-item>
-<app-left-bar-item name="User" routerLink="user"></app-left-bar-item>
-<app-left-bar-item name="User" routerLink="user"></app-left-bar-item>
+<app-left-bar-item name="Dashboard" (click)="goTo('')" [active]="isActive('')" color="#ff0">
+</app-left-bar-item>
+<app-left-bar-item name="User" (click)="goTo('user')" [active]="isActive('user')" color="#f00">
+</app-left-bar-item>
+<app-left-bar-item name="Register" (click)="goTo('user/register')" [active]="isActive('user/register')" color="#f0f">
+</app-left-bar-item>
+<app-left-bar-item name="Few users" (click)="goTo('user/few')" [active]="isActive('user/few')" color="#0ff">
+</app-left-bar-item>
+<app-left-bar-item name="User"></app-left-bar-item>
+<app-left-bar-item name="User"></app-left-bar-item>
+<app-left-bar-item name="User"></app-left-bar-item>
+<app-left-bar-item name="User"></app-left-bar-item>
+<app-left-bar-item name="User"></app-left-bar-item>

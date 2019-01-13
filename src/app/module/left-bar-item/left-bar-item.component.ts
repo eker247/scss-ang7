@@ -8,6 +8,10 @@ import { Component, OnInit, Input } from '@angular/core';
 export class LeftBarItemComponent implements OnInit {
   @Input() active: boolean;
   @Input() name: string;
+  @Input() color: string;
+  get fill() {
+    return this.color || 'blue';
+  }
 
   constructor() { }
 

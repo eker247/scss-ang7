@@ -1,4 +1,12 @@
 @import "./style_variables.scss";
-// @import "node_modules/bootstrap/scss/bootstrap.scss";
+@import "./variables.scss";
+@import "node_modules/bootstrap/scss/bootstrap.scss";
 // @import "node_modules/ngx-bootstrap/datepicker/bs-datepicker.scss";
 
+body {
+  color: $clr-text;
+}
+
+hr {
+  border-top: 1px solid $clr-text;
+}

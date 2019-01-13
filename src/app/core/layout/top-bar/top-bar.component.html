@@ -1,2 +1,8 @@
-<div class="tb-item hamburger-div" (click)="is.toggleSidebar()"></div>
-  <img class="tb-item" src="assets/png/LOGO.png" alt="LOGO">
+<div class="tb-container">
+  <img class="hamburger-img" src="assets/svg/menu.svg" alt="" (click)="is.toggleSidebar()">
+    
+  <!-- <img class="tb-item" src="assets/png/LOGO.png" alt="LOGO"> -->
+  <div class="tb-item txt">LOGO</div>
+  <img class="search-img" src="assets/svg/search.svg" alt="" (click)="is.toggleSidebar()">
+  <input class="tb-item searcher" type="text" placeholder="Search...">
+</div>

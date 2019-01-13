@@ -19,15 +19,12 @@ export class BreadcrumbService {
 
   parseUrl(url: string) {
     // console.log(this._ar.routeConfig.data['breadcrumb']);
-    console.log('Current URL:');
+    // console.log('Current URL:');
     if (url.length < 2) {
       return;
     }
     const tree: UrlTree = this._r.parseUrl(url);
     const g: UrlSegmentGroup = tree.root.children[PRIMARY_OUTLET];
     const s: UrlSegment[] = g.segments;
-    s.forEach(u => {
-      console.log(u.path);
-    });
   }
 }

@@ -5,15 +5,62 @@ $tb-content-height: $top-bar-height - 2 * $margin;
 %tb-content-item {
   display: inline-block;
   height: $tb-content-height;
-  margin: $margin 0 $margin $margin;
+  margin: 0 0 0 $margin;
 }
 
-.hamburger-div {
+.tb-container {
+  position: relative;
+  top: -3px;
+  display: inline-block;
+  margin: 0 $margin 0 $margin;
+}
+
+.hamburger-img {
   @extend %tb-content-item;
+  position: relative;
+  top: - $margin;
+  margin: 0;
   width: $tb-content-height;
-  background-color: $hamburger-color;
+  cursor: pointer;
+}
+
+.search-img {
+  @extend %tb-content-item;
+  position: relative;
+  top: - $margin;
+  margin-left: 3 * $margin;
+  width: 16px;
 }
 
 .tb-item {
   @extend %tb-content-item;
+}
+
+.txt {
+  color: $clr-text;
+  font-size: $tb-content-height;
+  font-weight: 900;
+}
+
+input {
+  background: lighten($clr-light-bg, 60);
+  outline: none !important;
+  border: 2px solid $clr-light-bg;
+  // box-shadow: 0 0 10px $clr-dark-bg;
+}
+
+input::placeholder { color: $clr-mid-bg; }
+
+input:focus {
+  outline: none !important;
+  border: 2px solid lighten($clr-light-bg, $amount: 20);
+  box-shadow: 0 0 10px $clr-dark-bg;
+}
+
+.searcher {
+  position: relative;
+  top: -4px;
+  padding: 0 $margin 0 $margin;
+  color: $clr-dark-bg;
+  font-size: 16px;
 }

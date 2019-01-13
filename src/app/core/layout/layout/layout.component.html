@@ -1,4 +1,4 @@
-<div class="content" [ngClass]="{'full-content': !(small$ | async), 'small-content': (small$ | async)}">
+<div class="content" [ngClass]="{'small-content': (is.sidebar$ | async), 'full-content': !(is.sidebar$ | async)}">
   <ng-content></ng-content>
 </div>
 
@@ -8,8 +8,4 @@
 
 <div class="left-bar" [ngClass]="{ 'left-arrive': (is.sidebar$ | async), 'left-gone': !(is.sidebar$ | async) }">
   <app-left-bar></app-left-bar>
-</div>
-  
-<div class="content" [ngClass]="{'small-content': (is.sidebar$ | async), 'full-content': !(is.sidebar$ | async)}">
-  <ng-content></ng-content>
 </div>
