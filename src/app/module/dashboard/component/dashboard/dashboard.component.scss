@@ -9,3 +9,8 @@
 h3, p {
   color: $clr-text;
 }
+
+img {
+  max-width: $content-width;
+  min-width: 420px;
+}

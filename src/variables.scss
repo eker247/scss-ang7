@@ -13,11 +13,11 @@ $margin: 6px;
 $clr-checked: #0c0;
 
 $clr-text: #fff;
-$clr-light-accent: #fc0;
 $clr-mid-accent: #f80;
+$clr-light-accent: lighten($clr-mid-accent, 10);
 $clr-light-bg: #904;
-$clr-mid-bg: #503;
-$clr-dark-bg: #202;
+$clr-mid-bg: darken($clr-light-bg, 20);
+$clr-dark-bg: darken($clr-light-bg, 27);
 
 $side-bar-active-bg: $clr-light-bg;
 

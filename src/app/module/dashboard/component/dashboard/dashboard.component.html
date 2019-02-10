@@ -1,5 +1,5 @@
-<app-page-div>
-  <ngb-carousel *ngIf="images">
+<div #dashboardDiv>
+  <ngb-carousel *ngIf="images" class="text-center">
     <ng-template ngbSlide>
       <img [src]="images[0]" alt="Random first slide">
       <div class="carousel-caption">
@@ -22,4 +22,4 @@
       </div>
     </ng-template>
   </ngb-carousel>
-</app-page-div>
+</div>

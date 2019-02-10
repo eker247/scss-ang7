@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -6,7 +6,9 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent implements OnInit, AfterViewInit {
+  @ViewChild('dashboardDiv') dashboardDiv: ElementRef;
+
   images = [1, 2, 3].map(() => `https://picsum.photos/900/500?random&t=${Math.random()}`);
 
   constructor(private _conf: NgbCarouselConfig) { }
@@ -16,6 +18,10 @@ export class DashboardComponent implements OnInit {
     this._conf.showNavigationIndicators = true;
     this._conf.interval = 3000;
     this._conf.pauseOnHover = true;
+  }
+
+  ngAfterViewInit() {
+    // console.log(this.dashboardDiv.nativeElement.offsetWidth);
   }
 
 }
